@@ -17,8 +17,10 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 from agenda.core.views import home
+from agenda.contatos.views import add_contato
 
 urlpatterns = [
     url(r'^$',home,name='home'),
+    url(r'^adicionar-contato/$',add_contato,name='add_contato'),
     url(r'^admin/', include(admin.site.urls)),
 ]
