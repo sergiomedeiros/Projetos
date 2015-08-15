@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Adicionar novo contato</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Novo Contato</h1>
+	<form action="" method="post" accept-charset="utf-8">
+	<!-- segurança - gera um md5 para garantir que vem de uma aplicacao django -->
+	{% csrf_token %}
+		{{ form_contato.as_p }}
+		<input type='submit' name='' value='Salvar Contato'>
+</body>
+</html>

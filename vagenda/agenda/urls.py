@@ -18,9 +18,13 @@ from django.contrib import admin
 
 from agenda.core.views import home
 from agenda.contatos.views import add_contato
+from agenda.contatos.views import cadastro_sucesso
+from agenda.contatos.views import lista_contatos
 
 urlpatterns = [
     url(r'^$',home,name='home'),
     url(r'^adicionar-contato/$',add_contato,name='add_contato'),
+    url(r'^sucesso/$',cadastro_sucesso,name='sucesso'),
+    url(r'^lista-contatos/$',lista_contatos,name='lista_contatos'),
     url(r'^admin/', include(admin.site.urls)),
 ]
