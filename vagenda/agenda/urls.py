@@ -20,11 +20,13 @@ from agenda.core.views import home
 from agenda.contatos.views import add_contato
 from agenda.contatos.views import cadastro_sucesso
 from agenda.contatos.views import lista_contatos
+from agenda.contatos.views import apagar_contato
 
 urlpatterns = [
     url(r'^$',home,name='home'),
     url(r'^adicionar-contato/$',add_contato,name='add_contato'),
     url(r'^sucesso/$',cadastro_sucesso,name='sucesso'),
     url(r'^lista-contatos/$',lista_contatos,name='lista_contatos'),
+    url(r'^deletar-contato/(?P<id>\d+)/$',apagar_contato,name='apagarcontato'),
     url(r'^admin/', include(admin.site.urls)),
 ]

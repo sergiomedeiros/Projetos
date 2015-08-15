@@ -31,7 +31,7 @@
 				<td>{{ c.sexo }}</td>
 				<td>{{ c.cidade }}</td>
 				<td><a href=""> Editar </a></td>
-				<td><a href=""> Apagar </a></td>
+				<td><a href="{% url 'apagarcontato' c.id %}"> Apagar </a></td>
 			</tr>
 		{% endfor %}
 		

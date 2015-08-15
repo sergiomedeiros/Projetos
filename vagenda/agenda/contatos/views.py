@@ -30,4 +30,10 @@ def lista_contatos(request):
 	# select * from arquivo, [:3] para listar uma determina quantidade de registros
 	contatos = Contato.objects.all()  
 	return render(request,'lista_contatos.html',{'contatos' : contatos})
-	
+
+
+def apagar_contato(request, id):
+	# usar get com quando o retorno for unico.
+	contato = Contato.objects.get(id=id).delete()  # ou 
+	#Contato.objects.get(id=id).delete()
+	return redirect(reverse('lista_contatos'))
